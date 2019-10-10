@@ -1,0 +1,1101 @@
+mechanism     
+
+reversible_step CO2_adsorptioin  # CO2 (g) --> CO2*
+
+   gas_reacs_prods  CO2  -1      
+   sites  1                       
+   initial                       
+      1  *     1                
+   final                          
+      1 CO2*   1
+                                 
+   pre_expon    8.278e+003       
+   pe_ratio     8.249e-007       
+   activ_eng    0.000           
+   prox_factor  0.500            
+
+end_reversible_step
+
+###############################################
+
+reversible_step CO_adsorption   # CO(g) --> CO*
+
+   gas_reacs_prods  CO -1
+   sites 1
+   initial 
+     1  *       1
+   final 
+     1  CO*     1
+
+   pre_expon      1.038e+008
+   pe_ratio       1.266e-008
+   activ_eng      0.000
+   prox_factor    0.500
+
+end_reversible_step 
+
+################################################
+
+reversible_step H2_activated_adsorption   # H2(g)  --> 2H*
+
+    gas_reacs_prods  H2 -1
+    sites  2
+    neighboring 1-2
+    initial
+      1   *      1
+      2   *      1
+    final 
+      1   H*     1
+      2   H*     1
+                                     
+    pre_expon      3.393e+003           
+    pe_ratio       1.089e-006           
+    activ_eng      0.262 
+    prox_factor    0.500
+
+end_reversible_step 
+
+#################################################
+
+reversible_step CO2_disociation       # CO2* --> CO* + O*
+
+    sites 2
+    neighboring 1-2
+    initial 
+      1   CO2*      1
+      2   *         1
+    final 
+      1   CO*       1
+      2   O*        1
+    
+    pre_expon       2.027e+011
+    pe_ratio        8.052e-003
+    activ_eng       0.855
+    prox_factor     0.500
+
+end_reversible_step
+
+#################################################
+
+reversible_step  HCOO_formation    # CO2* + H* --> HCOO*
+
+    sites 2
+    neighboring 1-2
+    initial 
+      1  CO2*      1
+      2  H*        1
+    final 
+      1  HCOO**     1
+      1  HCOO**     2
+
+    pre_expon      7.283e+011     
+    pe_ratio       1.389e-002     
+    activ_eng      1.054
+    prox_factor    0.500
+
+end_reversible_step
+
+##################################################
+
+reversible_step  COOH_formation   # CO2* + H* --> COOH* + *
+
+   sites 2
+   neighboring 1-2
+   initial
+     1  CO2*       1
+     2  H*         1
+   final 
+     1  COOH**      1
+     1  COOH**      2
+ 
+   pre_expon       5.332e+011       
+   pe_ratio        2.112e-002      
+   activ_eng       1.331
+   prox_factor     0.500
+
+end_reversible_step
+
+#################################################
+
+reversible_step CO2_OH_to_COOH_v1  # CO2* + OH* --> COOH* + O*
+
+   sites 3
+   neighboring 1-2 2-3 1-3
+   initial
+     1   CO2*      1
+     2   OH*       1
+     3   *         1
+   final
+     1   COOH**      1
+     1   COOH**      2
+     2   O*          1
+
+   pre_expon        4.282e+010
+   pe_ratio         5.876e-003
+   activ_eng        0.556
+   prox_factor      0.500
+
+end_reversible_step
+
+#################################################
+
+
+reversible_step CO2_OH_to_COOH_v2  # CO2* + OH* --> COOH* + O*
+
+   sites 3
+   neighboring 1-2 2-3
+   initial
+     1   CO2*      1
+     2   OH*       1
+     3   *         1
+   final
+     1   COOH**      1
+     1   COOH**      2
+     2   O*          1
+
+   pre_expon        4.282e+010
+   pe_ratio         5.876e-003
+   activ_eng        0.556
+   prox_factor      0.500
+
+end_reversible_step
+
+#################################################
+
+
+reversible_step  CO2_H2O_to_COOH_v1  #  CO2 + H2O --> COOH + OH
+
+   sites 3
+   neighboring 1-2 2-3 1-3
+   initial
+     1  CO2*     1
+     2  H2O*     1
+     3  *        1
+   final
+     1  COOH**    1
+     1  COOH**    2
+     2  OH*       1
+
+   pre_expon      1.350e+010
+   pe_ratio       3.612e-003
+   activ_eng      0.353
+   prox_factor    0.500
+
+end_reversible_step
+
+#################################################
+
+reversible_step  CO2_H2O_to_COOH_v2  #  CO2 + H2O --> COOH + OH
+
+   sites 3
+   neighboring 1-2 2-3
+   initial
+     1  CO2*     1
+     2  H2O*     1
+     3  *        1
+   final
+     1  COOH**    1
+     1  COOH**    2
+     2  OH*       1
+
+   pre_expon      1.350e+010
+   pe_ratio       3.612e-003
+   activ_eng      0.353
+   prox_factor    0.500
+
+end_reversible_step
+
+#################################################
+
+reversible_step  COOH_disociation   #  COOH* + *  --> CO* + OH*
+
+    sites 2
+    neighboring 1-2
+    initial
+      1  COOH**       1
+      1  COOH**       2
+    final 
+      1  CO*         1
+      2  OH*         1
+    
+    pre_expon        2.752e+013
+    pe_ratio         6.084e-001
+    activ_eng        0.495
+    prox_factor      0.500
+
+end_reversible_step
+
+################################################
+
+reversible_step  COOH_disociation_in_COH_O   #  COOH* + *  --> COH* +  O*
+
+   sites 2
+   neighboring 1-2
+   initial
+     1  COOH**      1
+     1  COOH**      2
+   final 
+     1  COH*       1
+     2  O*         1
+ 
+   pre_expon       3.975e+012
+   pe_ratio        2.053e-001
+   activ_eng       1.282
+   prox_factor     0.500
+
+end_reversible_step
+
+################################################
+
+reversible_step   HCOO_disociation     #  HCOO* + *  --> O* + HCO*
+
+   sites  2
+   neighboring  1-2
+   initial
+     1   HCOO**      1
+     1   HCOO**     2
+   final 
+     1  HCO*         1
+     2  O*           1
+   
+   pre_expon         4.119e+012
+   pe_ratio          5.467e-001
+   activ_eng         1.391
+   prox_factor       0.500
+
+end_reversible_step
+
+##################################################
+
+reversible_step  CO_dissociation        # CO*`+ O*   --> C* + O*
+
+   sites  2
+   neighboring  1-2
+   initial
+     1   CO*       1
+     2   *         1
+   final 
+     1   C*        1
+     2   O*        1
+    
+   pre_expon       1.847e+012
+   pe_ratio        1.122e-001
+   activ_eng       2.984
+   prox_factor     0.500
+
+end_reversible_step
+
+##################################################
+
+reversible_step  HCO_formation       #  CO*  + H*  --> HCO*  + *
+
+  sites  2
+  neighboring  1-2
+  initial
+    1   CO*       1
+    2   H*        1
+  final
+    1   HCO*      1
+    2   *         1
+
+  pre_expon       2.834e+013        
+  pe_ratio        8.810e-001       
+  activ_eng       1.419
+  prox_factor     0.500
+
+end_reversible_step
+
+###############################################
+
+reversible_step  HCO_disociation   # HCO*  + *   -->  CH* + O* 
+
+   sites 2
+   neighboring 1-2
+   initial
+     1  HCO*      1
+     2  *         1
+   final 
+     1  CH*       1
+     2  O*        1
+   
+   pre_expon      3.315e+012
+   pe_ratio       2.057e-001
+   activ_eng      1.098
+   prox_factor    0.500
+
+end_reversible_step
+
+##############################################
+
+reversible_step  COH_formation    # CO* + H*   ->  COH* + *
+
+   sites 2
+   neighboring  1-2
+   initial 
+     1  CO*        1
+     2  H*         1
+   final 
+     1  COH*       1
+     2  *          1
+   
+   pre_expon       3.083e+013      
+   pe_ratio        3.416e+000      
+   activ_eng       2.278
+   prox_factor     0.500
+
+end_reversible_step 
+
+############################################
+
+reversible_step  COH_dissociation     #  COH* + * -->  C*  + OH*
+
+   sites 2
+   neighboring  1-2
+   initial
+     1  COH*       1
+     2  *          1
+   final 
+     1  C*         1
+     2  OH*        1
+   
+   pre_expon       2.742e+012
+   pe_ratio        1.177e-001
+   activ_eng       1.810
+   prox_factor     0.500
+
+end_reversible_step
+
+#############################################
+
+reversible_step  CH_formation          #  C* + H* -->  CH* + *
+
+   sites 2 
+   neighboring  1-2
+   initial
+     1  C*         1
+     2  H*         1
+   final 
+     1  CH*        1
+     2  *          1 
+   
+   pre_expon       2.700e+013           
+   pe_ratio        1.383e+000           
+   activ_eng       0.639
+   prox_factor     0.500
+
+end_reversible_step
+
+##############################################
+
+reversible_step  CH2_formation        #  CH* + H* --> CH2* + *
+
+   sites 2
+   neighboring  1-2
+   initial
+     1  CH*        1
+     2  H*         1
+   final
+     1  CH2*       1
+     2  *          1
+    
+   pre_expon       4.926e+013           
+   pe_ratio        2.759e+000           
+   activ_eng       0.637
+   prox_factor     0.500
+
+end_reversible_step
+
+############################################
+
+reversible_step   CH3_formation       #  CH2* + H*  --> CH3* + *
+
+   sites 2
+   neighboring  1-2
+   initial
+     1  CH2*       1
+     2  H*         1
+   final 
+     1  CH3*       1
+     2  *          1
+  
+   pre_expon       3.505e+013        
+   pe_ratio        1.998e+000        
+   activ_eng       0.571
+   prox_factor     0.500
+
+end_reversible_step
+
+##########################################
+
+step CH4_formation         #  CH3* + H* --> CH4(g) + 2*
+
+   gas_reacs_prods  CH4 1
+   sites 2
+   neighboring 1-2
+   initial
+     1  CH3*       1
+     2  H*         1
+   final
+     1  *          1
+     2  *          1
+
+   pre_expon       1.651e+014         
+   activ_eng       0.785
+   prox_factor     0.500
+
+end_step
+
+########################################
+
+reversible_step   OH_formation     #  O* + H*  --> OH* + *
+
+   sites 2
+   neighboring 1-2
+   initial
+     1  O*        1
+     2  H*        1
+   final
+     1  OH*       1
+     2  *         1
+   
+   pre_expon      8.783e+013        
+   pe_ratio       2.987e+000     
+   activ_eng      1.159
+   prox_factor    0.500
+
+end_reversible_step
+
+#######################################
+
+reversible_step  H2O_formation         # OH* + H*  --> H2O*  + *
+
+   sites 2
+   neighboring 1-2
+   initial
+     1  OH*       1
+     2  H*        1
+   final
+     1  H2O*      1
+     2  *         1
+
+   pre_expon      1.200e+014     
+   pe_ratio       4.271e+001     
+   activ_eng      1.156
+   prox_factor    0.500
+
+end_reversible_step
+
+#######################################
+
+reversible_step   CH2O_formation     #  HCO* + H*  --> CH2O* + *
+
+   sites 2
+   neighboring 1-2
+   initial
+     1  HCO*        1
+     2  H*        1
+   final
+     1  CH2O*       1
+     2  *         1
+
+   pre_expon      1.419e+013     
+   pe_ratio       9.045e-001     
+   activ_eng      0.707
+   prox_factor    0.500
+
+end_reversible_step
+
+###############################################
+
+
+reversible_step   HCOH_formation_from_HCO     #  HCO* + H*  --> HCOH* + *
+
+   sites 2
+   neighboring 1-2
+   initial
+     1  HCO*        1
+     2  H*        1
+   final
+     1  HCOH*       1
+     2  *         1
+
+   pre_expon      2.156e+013      
+   pe_ratio       2.413e+000      
+   activ_eng      0.927
+   prox_factor    0.500
+
+end_reversible_step
+
+###############################################
+
+
+reversible_step   HCOH_formation_from_COH     #  COH* + H*  --> HCOH* + *
+
+   sites 2
+   neighboring 1-2
+   initial
+     1  COH*        1
+     2  H*        1
+   final
+     1  HCOH*       1
+     2  *         1
+
+   pre_expon      7.594e+012      
+   pe_ratio       1.448e+000      
+   activ_eng      0.817
+   prox_factor    0.500
+
+end_reversible_step
+
+###############################################
+
+
+reversible_step   HCOH_dissociation     #  HCOH*  --> CH* + OH*
+
+   sites 2
+   neighboring 1-2
+   initial
+     1  HCOH*        1
+     2  *        1
+   final
+     1  CH*       1
+     2  OH*         1
+
+   pre_expon      5.352e+012      
+   pe_ratio       2.094e-001      
+   activ_eng      0.716
+   prox_factor    0.500
+
+end_reversible_step
+
+###############################################
+
+reversible_step   CH2OH_formation_from_HCOH     #  HCOH* + H*  --> CH2OH* + *
+
+   sites 2
+   neighboring 1-2
+   initial
+     1  HCOH*        1
+     2  H*        1
+   final
+     1  CH2OH**       1
+     1  CH2OH**       2
+
+   pre_expon      1.423e+013      
+   pe_ratio       1.386e+000      
+   activ_eng      0.626
+   prox_factor    0.500
+
+end_reversible_step
+
+###############################################
+
+reversible_step   CH2OH_dissociation     #  CH2OH*   --> CH2* + OH*
+
+   sites 2
+   neighboring 1-2
+   initial
+     1  CH2OH**        1
+     1  CH2OH**        2
+   final
+     1  CH2*       1
+     2  OH*         1
+
+   pre_expon      2.784e+013      
+   pe_ratio       7.312e-001      
+   activ_eng      0.714
+   prox_factor    0.500
+
+end_reversible_step
+
+###############################################
+
+reversible_step   CH3OH_formation     #  CH2OH* + H*  --> CH3OH* + *
+
+   sites 3 
+   neighboring 1-2 2-3
+   initial
+     1  CH2OH**        1
+     1  CH2OH**        2
+     2  H*             1
+   final
+     1  CH3OH**        1
+     1  CH3OH**        2
+     2  *              1
+
+   pre_expon      2.212e+013      
+   pe_ratio       2.068e+001      
+   activ_eng      0.609
+   prox_factor    0.500
+
+end_reversible_step
+
+###############################################
+
+
+reversible_step   CH2OH_dissociation     #   CH2OH*  --> CH2O* + H*
+
+   sites 2
+   neighboring 1-2
+   initial
+     1  CH2OH**        1
+     1  CH2OH**        2
+   final
+     1  CH2O*       1
+     2  H*         1
+
+   pre_expon      1.602e+013      
+   pe_ratio       3.242e-001      
+   activ_eng      0.548
+   prox_factor    0.500
+
+end_reversible_step
+
+###############################################
+
+
+reversible_step   CH2O_dissociation     #  CH2O* *  --> CH2* + O*
+
+   sites 2
+   neighboring 1-2
+   initial
+     1  CH2O*        1
+     2  *        1
+   final
+     1  CH2*       1
+     2  O*         1
+
+   pre_expon      1.655e+013      
+   pe_ratio       9.370e-001      
+   activ_eng      0.963
+   prox_factor    0.500
+
+end_reversible_step
+
+###############################################
+
+
+reversible_step   CH3O_formation     #  CH2O* + H*  --> CH3O* + *
+
+   sites 2
+   neighboring 1-2
+   initial
+     1  CH2O*        1
+     2  H*        1
+   final
+     1  CH3O*       1
+     2  *         1
+
+   pre_expon      3.032e+013   
+   pe_ratio       2.074e+000      
+   activ_eng      0.344
+   prox_factor    0.500
+
+end_reversible_step
+
+###############################################
+
+
+reversible_step   CH3O_dissociation     #  CH3O*   --> CH3* + O*
+
+   sites 2
+   neighboring 1-2
+   initial
+     1  CH3O*        1
+     2  *        1
+   final
+     1  CH3*       1
+     2  O*         1
+
+   pre_expon      1.436e+013      
+   pe_ratio       4.251e-001      
+   activ_eng      1.364
+   prox_factor    0.500
+
+end_reversible_step
+
+###############################################
+
+
+reversible_step   CH3OH_formation     #  CH3O* + H*  --> CH3OH* + *
+
+   sites 2
+   neighboring 1-2
+   initial
+     1  CH3O*        1
+     2  H*        1
+   final
+     1  CH3OH**       1
+     1  CH3OH**       2
+
+   pre_expon      1.518e+014      
+   pe_ratio       2.319e+001      
+   activ_eng      1.385
+   prox_factor    0.500
+
+end_reversible_step
+
+###############################################
+
+
+reversible_step   CH3OH_dissociation     #  CH3OH* + H*  --> CH3* + OH*
+
+   sites 2
+   neighboring 1-2
+   initial
+     1  CH3OH**        1
+     1  CH3OH**        2
+   final
+     1  CH3*       1
+     2  OH*         1
+
+   pre_expon      4.482e+012      
+   pe_ratio       6.770e-002      
+   activ_eng      1.796
+   prox_factor    0.500
+
+end_reversible_step
+
+###############################################
+
+
+
+reversible_step   OH_OH_reaction     #  OH* + OH*  --> H2O* + O*
+
+   sites 2
+   neighboring 1-2
+   initial
+     1  OH*  1
+     2  OH*  1
+   final
+     1  H2O*       1
+     2  O*         1
+
+   pre_expon      4.596e+012      
+   pe_ratio       1.902e+000      
+   activ_eng      0.181
+   prox_factor    0.500
+
+end_reversible_step
+
+###############################################
+
+
+
+reversible_step  CO2_OH_to_HCOO_v1    #  CO2 + OH*  --> HCOO* + O*
+
+   sites 3
+   neighboring 1-2 2-3 1-3
+   initial
+     1  CO2*  1
+     2  OH*   1
+     3  *     1
+   final
+     1  HCOO**    1
+     1  HCOO**    2
+     2  O*        1
+
+   pre_expon      4.172e+011      
+   pe_ratio       4.191e-003      
+   activ_eng      1.781
+   prox_factor    0.500
+
+end_reversible_step
+
+###############################################
+
+
+reversible_step  CO2_OH_to_HCOO_v2    #  CO2 + OH*  --> HCOO* + O*
+
+   sites 3
+   neighboring 1-2 2-3
+   initial
+     1  CO2*  1
+     2  OH*   1
+     3  *     1
+   final
+     1  HCOO**    1
+     1  HCOO**    2
+     2  O*        1
+
+   pre_expon      4.172e+011      
+   pe_ratio       4.191e-003      
+   activ_eng      1.781
+   prox_factor    0.500
+
+end_reversible_step
+
+###############################################
+
+
+reversible_step  CO2_H2O_to_HCOO_v1    #  CO2 + H2O*  --> HCOO* + OH*
+
+   sites 3
+   neighboring 1-2 2-3 1-3
+   initial
+     1  CO2*  1
+     2  H2O*   1
+     3  *     1
+   final
+     1  HCOO**    1
+     1  HCOO**    2
+     2  OH*        1
+
+   pre_expon      4.517e+011      
+   pe_ratio       7.894e-003      
+   activ_eng      1.763
+   prox_factor    0.500
+
+end_reversible_step
+
+###############################################
+
+reversible_step  CO2_H2O_to_HCOO_v2    #  CO2 + H2O*  --> HCOO* + OH*
+
+   sites 3
+   neighboring 1-2 2-3 1-3
+   initial
+     1  CO2*  1
+     2  H2O*   1
+     3  *     1
+   final
+     1  HCOO**    1
+     1  HCOO**    2
+     2  OH*        1
+
+   pre_expon      4.517e+011      
+   pe_ratio       7.894e-003      
+   activ_eng      1.763
+   prox_factor    0.500
+
+end_reversible_step
+
+###############################################
+
+step  H2O_desorption      # H2O* --> H2O(g)
+
+   gas_reacs_prods  H2O 1
+   sites 1
+   initial 
+     1  H2O*       1
+   final 
+     1  *          1
+   
+   pre_expon       2.778e+014
+   activ_eng       0.000
+   prox_factor     0.500
+
+end_step
+
+#########################################
+
+step  CH3OH_desorption      # CH3OH* --> CH3OH(g)
+
+   gas_reacs_prods  CH3OH 1
+   sites 2
+   neighboring 1-2
+   initial
+     1  CH3OH**       1
+     1  CH3OH**       2
+   final
+     1  *          1
+     2  *          1
+
+   pre_expon       4.325e+015
+   activ_eng       0.000
+   prox_factor     0.500
+
+end_step
+
+#########################################
+
+step  CH2O_desorption      # CH2O* --> CH2O(g)
+
+   gas_reacs_prods  CH2O 1
+   sites 1
+   initial
+     1  CH2O*       1
+   final
+     1  *          1
+
+   pre_expon       6.847e+016
+   activ_eng       0.000
+   prox_factor     0.500
+
+end_step
+
+#########################################
+
+
+step  C_difussion        # C* + * ---> C* + *
+
+   sites 2
+   neighboring 1-2
+   initial
+     1  C*        1
+     2  *         1
+   final
+     1  *         1
+     2  C*        1
+  
+   pre_expon      8.358e+012
+   activ_eng      0.311
+   prox_factor    0.500
+
+end_step
+
+########################################
+
+step  O_difussion         # O* + * --> O* + *
+
+   sites 2
+   neighboring  1-2
+   initial
+     1  O*         1
+     2  *          1
+   final 
+     1  *          1
+     2  O*         1
+
+   pre_expon       6.848e+005    
+   activ_eng       0.423
+   prox_factor     0.500
+
+end_step
+
+########################################
+
+step   H_difussion       # H* + * --> H* + *
+
+   sites  2
+   neighboring  1-2
+   initial
+     1  H*         1
+     2  *          1
+   final 
+     1  *          1
+     2  H*         1
+   
+   pre_expon       1.101e+003     
+   activ_eng       0.115
+   prox_factor     0.500
+
+end_step 
+
+########################################
+
+step  CO_difussion       # CO* + * --> * + CO* 
+
+  sites 2
+  neighboring  1-2
+  initial
+    1  CO*        1
+    2  *          1
+  final 
+    1  *          1
+    2  CO*        1
+
+   pre_expon      2.863e+005     
+   activ_eng      0.114
+   prox_factor    0.500
+
+end_step
+
+########################################
+
+step  OH_difussion     # OH* + * --> * + OH*
+
+   sites 2
+   neighboring  1-2
+   initial
+     1  OH*        1
+     2  *          1
+   final 
+     1  *          1
+     2  OH*        1
+
+   pre_expon       1.328e+005    
+   activ_eng       0.191
+   prox_factor     0.500
+
+end_step
+
+#######################################
+
+step  H2O_difussion    #  H2O* + * --> H2O* + *
+
+   sites  2
+   neighboring  1-2
+   initial
+     1  H2O*       1
+     2  *          1
+   final
+     1  *          1
+     2  H2O*       1
+  
+   pre_expon       1.495e+013
+   activ_eng       0.085
+   prox_factor     0.500
+
+end_step
+
+#######################################
+
+step  CH_difussion   #  CH* + *  -->  CH*  +  *
+
+   sites 2
+   neighboring  1-2
+   initial
+     1  CH*        1
+     2  *          1
+   final 
+     1  *          1
+     2  CH*        1
+   
+   pre_expon       7.000e+012
+   activ_eng       0.323
+   prox_factor     0.500
+
+end_step
+
+######################################
+
+step  CH2_difussion     # CH2* + * --> CH2* + *
+
+   sites 2
+   neighboring  1-2
+   initial
+     1  CH2*       1
+     2  *          1
+   final 
+     1  *          1
+     2  CH2*       1
+   
+   pre_expon       4.984e+012
+   activ_eng       0.186
+   prox_factor     0.500
+
+end_step
+
+#####################################
+
+step  CH3_difussion    # CH3* + * --> CH3* + *
+
+   sites 2
+   neighboring  1-2
+   initial
+     1  CH3*       1
+     2  *          1
+   final
+     1  *          1
+     2  CH3*       1
+  
+   pre_expon       7.001e+012
+   activ_eng       0.148
+   prox_factor     0.500
+
+end_step 
+
+############################################
+
+end_mechanism 

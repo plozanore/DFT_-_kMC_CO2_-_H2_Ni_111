@@ -1,0 +1,1241 @@
+energetics 
+#######################################################################
+
+cluster H_ads                 
+
+   sites 1                   
+   lattice_state              
+     1  H*     1              
+   cluster_eng  -0.301         
+
+end_cluster                    
+
+
+#######################################################################
+
+cluster CO_ads
+
+   sites 1
+   lattice_state 
+     1  CO*    1
+
+   cluster_eng  0.153
+
+end_cluster
+
+#######################################################################
+
+cluster  O_ads 
+
+   sites 1
+   lattice_state
+     1  O*     1
+
+   cluster_eng  -0.091
+
+end_cluster
+
+#######################################################################
+
+cluster CO2_ads 
+
+    sites 1
+    lattice_state 
+      1  CO2*   1
+ 
+    cluster_eng  0.750
+
+end_cluster
+
+#######################################################################
+
+cluster  HCOO_ads
+
+    sites 2
+    neighboring 1-2
+    lattice_state
+      1  HCOO**  1
+      1  HCOO**  2
+
+    cluster_eng 0.489
+
+end_cluster
+
+#######################################################################
+
+cluster  COOH_ads
+
+   sites 2
+   neighboring 1-2
+   lattice_state
+     1  COOH**  1
+     1  COOH**  2
+   cluster_eng  0.958
+
+end_cluster
+
+#######################################################################
+
+cluster  OH_ads
+
+   sites 1
+   lattice_state
+     1  OH*    1
+
+   cluster_eng  -0.237
+
+end_cluster
+
+#######################################################################
+
+cluster  HCO_ads
+
+   sites 1
+   lattice_state 
+     1 HCO*    1
+
+   cluster_eng  1.113
+
+end_cluster
+
+#######################################################################
+
+cluster C_ads
+
+   sites 1
+   lattice_state
+     1  C*     1
+
+   cluster_eng 1.680
+
+end_cluster
+
+#######################################################################
+
+cluster  CH_ads
+
+   sites 1
+   lattice_state
+     1  CH*    1
+
+   cluster_eng  0.890
+
+end_cluster
+
+#######################################################################
+
+cluster COH_ads
+
+   sites 1
+   lattice_state 
+     1  COH*   1
+
+   cluster_eng  0.976
+
+end_cluster
+
+#######################################################################
+
+cluster CH2_ads
+
+   sites 1
+   lattice_state 
+     1  CH2*   1
+
+   cluster_eng  0.900
+
+end_cluster
+
+#######################################################################
+
+cluster CH3_ads
+
+   sites 1
+   lattice_state 
+     1  CH3*   1
+
+   cluster_eng  0.515
+
+end_cluster
+
+#######################################################################
+
+cluster H2O_ads
+
+   sites 1
+   lattice_state 
+     1  H2O*   1
+   
+   cluster_eng  -0.195
+
+end_cluster
+
+#######################################################################
+
+cluster CH2O_ads
+
+   sites 1
+   lattice_state
+     1  CH2O*   1
+
+   cluster_eng  1.182
+
+end_cluster
+
+#######################################################################
+
+cluster CH2OH_ads
+
+   sites 2
+   neighboring 1-2
+   lattice_state
+     1  CH2OH**   1
+     1  CH2OH**   2
+
+   cluster_eng  1.329
+
+end_cluster
+
+#######################################################################
+
+cluster CH3O_ads
+
+   sites 1
+   lattice_state
+     1  CH3O*   1
+
+   cluster_eng  0.555
+
+end_cluster
+
+#######################################################################
+
+cluster CH3OH_ads
+
+   sites 2
+   neighboring 1-2
+   lattice_state
+     1  CH3OH**   1
+     1  CH3OH**   2
+
+   cluster_eng  0.735
+
+end_cluster
+
+#######################################################################
+
+cluster HCOH_ads
+
+   sites 1
+   lattice_state
+     1  HCOH*   1
+
+   cluster_eng  1.407
+
+end_cluster
+
+#######################################################################
+
+cluster  H-H_Interaction
+
+   sites 2 
+   neighboring  1-2 
+   lattice_state
+     1  H*     1
+     2  H*     1
+   graph_multiplicity 2     
+   cluster_eng  0.270
+
+end_cluster
+
+#######################################################################
+
+cluster  CO-O_Interaction
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1 CO*     1
+     2 O*      1
+
+   cluster_eng  0.121
+
+end_cluster
+
+#######################################################################
+
+cluster  CO2-H_Interaction    
+
+   sites  2
+   neighboring  1-2
+   lattice_state
+     1 CO2*    1
+     2 H*      1
+   
+   cluster_eng  -0.114
+
+end_cluster
+
+#######################################################################
+
+cluster  CO-OH_Interaction
+
+   sites 2
+   neighboring  1-2 
+   lattice_state
+     1  CO*    1
+     2  OH*    1
+
+   cluster_eng  0.026
+
+end_cluster
+
+#######################################################################
+
+cluster  O-HCO_Interaction
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  O*     1
+     2  HCO*   1
+    
+   cluster_eng  0.314
+
+end_cluster
+
+#######################################################################
+
+cluster  C-O_Interaction
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  C*     1
+     2  O*     1
+   
+   cluster_eng  0.401
+
+end_cluster
+
+#######################################################################
+
+cluster  CO-H_Interaction           
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  CO*    1
+     2  H*     1
+   
+   cluster_eng  0.054
+
+end_cluster
+
+#######################################################################
+
+cluster  CH-O_Interaction
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  CH*    1
+     2  O*     1
+   
+   cluster_eng  0.346
+
+end_cluster
+
+#######################################################################
+
+cluster  C-OH_Interaction 
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  C*     1
+     2  OH*    1
+
+   cluster_eng  0.201
+
+end_cluster
+
+#######################################################################
+
+cluster   C-H_Interaction
+
+    sites  2
+    neighboring  1-2
+    lattice_state
+      1  C*     1
+      2  H*     1
+
+    cluster_eng  0.138
+
+end_cluster
+
+#######################################################################
+
+cluster   CH-H_Interaction
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  CH*    1
+     2  H*     1
+   
+   cluster_eng  0.012
+
+end_cluster
+
+#######################################################################
+
+cluster   CH2-H_Interaction
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  CH2*   1
+     2  H*     1
+  
+   cluster_eng  0.023
+
+end_cluster
+
+#######################################################################
+
+cluster  CH3-H_Interaction
+
+   sites 2
+   neighboring  1-2
+   lattice_state 
+     1  CH3*   1
+     2  H*     1
+ 
+   cluster_eng  0.013
+
+end_cluster
+
+#######################################################################
+
+cluster   O-H_Interaction
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  O*     1
+     2  H*     1
+
+   cluster_eng  0.118
+
+end_cluster
+
+#######################################################################
+
+cluster   OH-H_Interaction
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  OH*    1
+     2  H*     1
+ 
+   cluster_eng  0.093
+
+end_cluster
+
+#######################################################################
+
+cluster  COOH-O_Interaction_v1
+
+   sites 3
+   neighboring  1-2 2-3 1-3
+   lattice_state 
+     1  COOH**   1
+     1  COOH**   2
+     2  O*       1
+
+    cluster_eng  -0.076
+
+end_cluster
+
+
+#######################################################################
+
+cluster  COOH-O_Interaction_v2
+
+   sites 3
+   neighboring  1-2 2-3
+   lattice_state
+     1  COOH**   1
+     1  COOH**   2
+     2  O*       1
+
+    cluster_eng  -0.076
+
+end_cluster
+
+#######################################################################
+
+cluster  COOH-O_Interaction_v3
+
+   sites 3
+   neighboring  1-2 1-3
+   lattice_state
+     1  COOH**   1
+     1  COOH**   2
+     2  O*       1
+
+    cluster_eng  -0.076
+
+end_cluster
+
+#######################################################################
+
+cluster   CO2-OH_Interaction 
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  CO2*   1
+     2  OH*    1
+   
+   cluster_eng  -0.092
+
+end_cluster
+
+#######################################################################
+
+cluster   COOH-OH_Interaction_v1
+
+   sites 3
+   neighboring  1-2 2-3 1-3
+   lattice_state 
+     1  COOH**   1
+     1  COOH**   2
+     2  OH*      1  
+  
+   cluster_eng  0.002
+
+end_cluster
+
+
+#######################################################################
+
+cluster   COOH-OH_Interaction_v2
+
+   sites 3
+   neighboring  1-2 2-3 
+   lattice_state
+     1  COOH**   1
+     1  COOH**   2
+     2  OH*      1
+
+   cluster_eng  0.002
+
+end_cluster
+
+######################################################################
+
+
+cluster   COOH-OH_Interaction_v3
+
+   sites 3
+   neighboring  1-2 1-3
+   lattice_state
+     1  COOH**   1
+     1  COOH**   2
+     2  OH*      1
+
+   cluster_eng  0.002
+
+end_cluster
+
+#######################################################################
+
+cluster   CO2-H2O_Interaction 
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  CO2*   1
+     2  H2O*   1
+
+    cluster_eng  -0.159
+
+end_cluster
+
+#######################################################################
+
+cluster    COH-O_Interaction 
+
+    sites 2
+    neighboring  1-2
+    lattice_state
+      1  COH*   1
+      2  O*     1
+
+    cluster_eng   0.144
+
+end_cluster
+
+#######################################################################
+
+cluster   CO-CO_Interaction
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  CO*     1
+     2  CO*     1
+
+   graph_multiplicity 2      
+   cluster_eng   0.144
+
+end_cluster  
+
+####################################################################
+
+cluster   CO-H2O_Interaction
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  CO*     1
+     2  H2O*     1
+
+   cluster_eng   -0.140
+
+end_cluster
+
+######################################################################
+
+cluster   H2O-H_Interaction
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  H2O*     1
+     2  H*       1
+
+   cluster_eng   0.086  
+
+end_cluster
+
+####################################################################
+
+cluster   H2O-H2O_Interaction
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  H2O*     1
+     2  H2O*     1
+
+   graph_multiplicity 2      
+   cluster_eng   -0.212
+
+end_cluster
+
+####################################################################
+
+cluster   H2O-OH_Interaction
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  H2O*     1
+     2  OH*     1
+
+   cluster_eng   -0.067
+
+end_cluster
+
+####################################################################
+
+cluster   H2O-O_Interaction
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  H2O*     1
+     2  O*       1
+
+   cluster_eng   -0.169
+
+end_cluster
+
+####################################################################
+
+cluster   OH-O_Interaction
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  OH*     1
+     2  O*      1
+
+   cluster_eng   0.203
+
+end_cluster
+
+####################################################################
+
+cluster   OH-OH_Interaction
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  OH*     1
+     2  OH*     1
+
+   graph_multiplicity 2      
+   cluster_eng   0.238
+
+end_cluster
+
+####################################################################
+
+
+cluster   O-O_Interaction
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  O*     1
+     2  O*     1
+
+   graph_multiplicity 2      
+   cluster_eng   0.356
+
+end_cluster
+
+####################################################################
+
+cluster   CH2-O_Interaction
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  CH2*     1
+     2  O*     1
+
+   cluster_eng   -0.029
+
+end_cluster
+
+####################################################################
+
+cluster   HCO-H_Interaction
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  HCO*     1
+     2  H*     1
+
+   cluster_eng   0.109
+
+end_cluster
+
+####################################################################
+
+cluster   CH2O-H_Interaction
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  CH2O*     1
+     2  H*     1
+
+   cluster_eng   0.134
+
+end_cluster
+
+####################################################################
+
+cluster   CH2OH-H_Interaction_v1
+
+   sites 3
+   neighboring  1-2 2-3 1-3
+   lattice_state
+     1  CH2OH**     1
+     1  CH2OH**     2
+     2  H*         1
+
+   cluster_eng   0.131
+
+end_cluster
+
+####################################################################
+
+cluster   CH2OH-H_Interaction_v2
+
+   sites 3
+   neighboring  1-2 2-3
+   lattice_state
+     1  CH2OH**     1
+     1  CH2OH**     2
+     2  H*         1
+
+   cluster_eng   0.131
+
+end_cluster
+
+####################################################################
+
+
+
+cluster   CH2OH-H_Interaction_v3
+
+   sites 3
+   neighboring  1-2 1-3
+   lattice_state
+     1  CH2OH**     1
+     1  CH2OH**     2
+     2  H*         1
+
+   cluster_eng   0.131
+
+end_cluster
+
+####################################################################
+
+
+cluster   HCOH-H_Interaction
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  HCOH*     1
+     2  H*     1
+
+   cluster_eng   0.008
+
+end_cluster
+
+####################################################################
+
+cluster   CH2-OH_Interaction
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  CH2*     1
+     2  OH*     1
+
+   cluster_eng   0.222
+
+end_cluster
+
+####################################################################
+
+cluster   CH3-O_Interaction
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  CH3*     1
+     2  O*     1
+
+   cluster_eng   -0.024
+
+end_cluster
+
+####################################################################
+
+cluster   CH3-OH_Interaction
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  CH3*     1
+     2  OH*     1
+
+   cluster_eng   0.163
+
+end_cluster
+
+####################################################################
+
+cluster   CH3O-H_Interaction
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  CH3O*     1
+     2  H*     1
+
+   cluster_eng   0.046
+
+end_cluster
+
+####################################################################
+
+cluster   COH-H_Interaction
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  COH*     1
+     2  H*     1
+
+   cluster_eng   0.059
+
+end_cluster
+
+####################################################################
+
+cluster   CH-OH_Interaction
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  CH*     1
+     2  OH*     1
+
+   cluster_eng   0.278
+
+end_cluster
+
+####################################################################
+
+cluster   HCOO-O_Interaction_v1
+
+   sites 3
+   neighboring  1-2 2-3 1-3
+   lattice_state
+     1  HCOO**     1
+     1  HCOO**     2
+     2  O*         1
+
+   cluster_eng   0.024
+
+end_cluster
+
+####################################################################
+
+
+cluster   HCOO-O_Interaction_v2
+
+   sites 3
+   neighboring  1-2 2-3 
+   lattice_state
+     1  HCOO**     1
+     1  HCOO**     2
+     2  O*         1
+
+   cluster_eng   0.024
+
+end_cluster
+
+####################################################################
+
+
+cluster   HCOO-O_Interaction_v3
+
+   sites 3
+   neighboring  1-2 1-3
+   lattice_state
+     1  HCOO**     1
+     1  HCOO**     2
+     2  O*         1
+
+   cluster_eng   0.024
+
+end_cluster
+
+####################################################################
+
+
+cluster   HCOO-OH_Interaction_v1
+
+   sites 3
+   neighboring  1-2 2-3 1-3
+   lattice_state
+     1  HCOO**     1
+     1  HCOO**     2
+     2  OH*        1
+
+   cluster_eng   -0.03
+
+end_cluster
+
+####################################################################
+
+cluster   HCOO-OH_Interaction_v2
+
+   sites 3
+   neighboring  1-2 2-3
+   lattice_state
+     1  HCOO**     1
+     1  HCOO**     2
+     2  OH*        1
+
+   cluster_eng   -0.03
+
+end_cluster
+
+####################################################################
+
+
+cluster   HCOO-OH_Interaction_v3
+
+   sites 3
+   neighboring  1-2 1-3
+   lattice_state
+     1  HCOO**     1
+     1  HCOO**     2
+     2  OH*        1
+
+   cluster_eng   -0.03
+
+end_cluster
+
+####################################################################
+
+
+cluster   HCOO-H_Interaction_v1
+
+   sites 3
+   neighboring  1-2 2-3 1-3
+   lattice_state
+     1  HCOO**     1
+     1  HCOO**     2
+     2  H*        1
+
+   cluster_eng   0.214
+
+end_cluster
+
+####################################################################
+
+
+cluster   HCOO-H_Interaction_v2
+
+   sites 3
+   neighboring  1-2 2-3
+   lattice_state
+     1  HCOO**     1
+     1  HCOO**     2
+     2  H*         1
+
+   cluster_eng   0.214
+
+end_cluster
+
+####################################################################
+
+
+cluster   HCOO-H_Interaction_v1
+
+   sites 3
+   neighboring  1-2 1-3
+   lattice_state
+     1  HCOO**     1
+     1  HCOO**     2
+     2  H*        1
+
+   cluster_eng   0.214
+
+end_cluster
+
+####################################################################
+
+
+cluster   COOH-H_Interaction_v1
+
+   sites 3
+   neighboring  1-2 2-3 1-3
+   lattice_state
+     1  COOH**     1
+     1  COOH**     2
+     2  H*         1
+
+   cluster_eng   0.203
+
+end_cluster
+
+####################################################################
+
+
+cluster   COOH-H_Interaction_v2
+
+   sites 3
+   neighboring  1-2 2-3
+   lattice_state
+     1  COOH**     1
+     1  COOH**     2
+     2  H*         1
+
+   cluster_eng   0.203
+
+end_cluster
+
+####################################################################
+
+
+cluster   COOH-H_Interaction_v3
+
+   sites 3
+   neighboring  1-2 1-3
+   lattice_state
+     1  COOH**     1
+     1  COOH**     2
+     2  H*         1
+
+   cluster_eng   0.203
+
+end_cluster
+
+####################################################################
+
+cluster   HCOO-CO_Interaction_v1
+
+   sites 3
+   neighboring  1-2 2-3 1-3
+   lattice_state
+     1  HCOO**     1
+     1  HCOO**     2
+     2  CO*        1
+
+   cluster_eng   -0.030
+
+end_cluster
+
+####################################################################
+
+cluster   HCOO-CO_Interaction_v2
+
+   sites 3
+   neighboring  1-2 2-3
+   lattice_state
+     1  HCOO**     1
+     1  HCOO**     2
+     2  CO*        1
+
+   cluster_eng   -0.030
+
+end_cluster
+
+####################################################################
+
+cluster   HCOO-CO_Interaction_v3
+
+   sites 3
+   neighboring  1-2 1-3
+   lattice_state
+     1  HCOO**     1
+     1  HCOO**     2
+     2  CO*        1
+
+   cluster_eng   -0.030
+
+end_cluster
+
+####################################################################
+
+cluster   COOH-CO_Interaction_v1
+
+   sites 3
+   neighboring  1-2 2-3 1-3
+   lattice_state
+     1  COOH**     1
+     1  COOH**     2
+     2  CO*        1
+
+   cluster_eng   -0.010
+
+end_cluster
+
+####################################################################
+
+cluster   COOH-CO_Interaction_v2
+
+   sites 3
+   neighboring  1-2 2-3 
+   lattice_state
+     1  COOH**     1
+     1  COOH**     2
+     2  CO*        1
+
+   cluster_eng   -0.010
+
+end_cluster
+
+####################################################################
+
+
+cluster   COOH-CO_Interaction_v3
+
+   sites 3
+   neighboring  1-2 1-3
+   lattice_state
+     1  COOH**     1
+     1  COOH**     2
+     2  CO*        1
+
+   cluster_eng   -0.010
+
+end_cluster
+
+####################################################################
+
+cluster   CO-HCO_Interaction
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  CO*     1
+     2  HCO*    1
+
+   cluster_eng   0.076
+
+end_cluster
+
+####################################################################
+
+cluster   OH-HCO_Interaction
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  OH*     1
+     2  HCO*    1
+
+   cluster_eng   0.080
+
+end_cluster
+
+####################################################################
+
+cluster   CO-CO2_Interaction
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  CO*     1
+     2  CO2*    1
+
+   cluster_eng   -0.050
+
+end_cluster
+
+####################################################################
+
+cluster   O-CO2_Interaction
+
+   sites 2
+   neighboring  1-2
+   lattice_state
+     1  O*     1
+     2  CO2*    1
+
+   cluster_eng   -0.043
+
+end_cluster
+
+####################################################################
+
+end_energetics 
+            

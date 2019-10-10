@@ -1,0 +1,5 @@
+lattice default_choice  
+
+hexagonal_periodic 2.5   8   4    
+
+end_lattice
